@@ -1,0 +1,14 @@
+<form [formGroup]="name" class="form-group" (ngSubmit)="onSubmit()" novalidate>
+    <p>
+        <input type="text" id="name" name="firstname" class="form-control" formControlName="firstname" required minLength="3" maxlength="22" placeholder="écrivez ici votre prénom." (blur)="onBlur($event)">
+    </p>
+    <div>
+        <div *ngIf="(name.touched || name.dirty) && name.invalid" class="alert alert-danger">
+            name is invalid
+        </div>
+    </div>
+    <p>
+        <input type="text" id="lastname" name="lastname" #prenom class="form-control" maxlength="22" placeholder="écrivez ici votre nom." formControlName="firstname" minlength="2" required>
+    </p>
+    <button type="submit" [disabled]="name.invalid">Submit</button>
+</form>

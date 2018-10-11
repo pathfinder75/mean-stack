@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark bg-dark">
+    <h2><a href="/" class="navbar-brand">Skwirrel</a></h2>
+    <li class="nav-item nav-link">
+        <a routerLink="/home" routerLinkActive="active">home</a>
+    </li>
+    <li class="nav-item nav-link">
+            <a routerLink="/flat" routerLinkActive="active">flat</a>
+            </li>
+    <li class="nav-item nav-link">
+        <a routerLink="/info" routerLinkActive="active">info</a>
+    </li>
+    <li class="nav-item nav-link">
+        <a routerLink="/register" routerLinkActive="active">s'enregistrer</a>
+    </li>
+    </nav>
+    <div class="jumbotron">
+        <h1>Welcome {{ title }} </h1>
+    </div>
+    <input type="text" #serverName>
+    <button class="btn btn-primary" (click)="onAddServer(serverName.value)">Add Sensor</button>
+    <br><br>
+    <button class="btn btn-primary" (click)="onSave()">Save sensors to the database</button>
+    <hr>
+    <div class="list-group" *ngFor="let sensor of sensors">
+        <div class="card-title">
+            <div class="card-body">
+                    {{ sensor.name }}
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>

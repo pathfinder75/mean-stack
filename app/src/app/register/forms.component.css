@@ -1,0 +1,17 @@
+.autocapitalize {
+    text-transform: capitalize;
+    background-color: yellowgreen;
+}
+.uppercase {
+    text-transform: uppercase;
+    background-color: orangered;
+}
+
+.lowercase {
+    text-transform: lowercase;
+    background-color: yellow;
+}
+
+.first {
+    background-color: orange;
+}

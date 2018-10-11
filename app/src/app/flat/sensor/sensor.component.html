@@ -1,0 +1,7 @@
+<ol>
+    <li *ngFor="let sensor of sensors">Sensor name {{ sensor.name }}
+        <button (click)="onClick()">i | o</button>
+        Sensor value {{ sensor.sequence }}
+        Sensor sequence {{ sensor.id }}
+      </li>
+</ol>
